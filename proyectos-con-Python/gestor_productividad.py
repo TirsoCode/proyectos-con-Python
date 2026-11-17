@@ -18,8 +18,8 @@ Todo se guarda en la memoria del programa: si sales, se borra.
 Ejecutar:
     python gestor_productividad.py
 
-Tiene 5 errores marcados con "# BUG" para que los arregles,
-y 1 función sin terminar marcada con "# TODO".
+Tiene 5 errores marcados con "BUG" para que los arregles,
+y 1 función sin terminar marcada con "TODO".
 """
 
 notas = []      # lista de textos
