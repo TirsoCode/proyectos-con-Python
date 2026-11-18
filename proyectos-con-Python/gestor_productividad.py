@@ -16,9 +16,8 @@ def ver_notas():
         print("No hay notas todavía.")
         return
 
-    # BUG 1: range(1, len(notas)) empieza en 1, así que nunca
-    # muestra la primera nota (la posición 0).
-    for i in range(1, len(notas)):
+
+    for i in range(0, len(notas)):
         print(i + 1, "-", notas[i])
 
 
@@ -37,9 +36,7 @@ def buscar_nota():
     palabra = input("Buscar: ")
     if palabra === notas.lower() or palabra==notas.upper():
         print("Encontrada la nota es ", nota)
-def contar_palabras():
-    # TODO: devuelve cuántas palabras hay entre todas las notas.
-    # Pista: recorre 'notas' con un for y suma len(nota.split()).
+def contar_cuantas_notas():
     for a in notas:
         len(notas)
 
@@ -50,7 +47,7 @@ def contar_palabras():
 
 def ver_tareas():
     print()
-    print("--- TAREAS ---")
+    print("TAREAS")
     if len(tareas) == 0:
         print("No hay tareas.")
         return
@@ -77,7 +74,9 @@ def completar_tarea():
         return
 
     numero = int(input("Número de tarea: "))
-
+def cuantas_tareas:
+    print("Tienes",len(tareas))
+    
     # BUG 3: la lista empieza en 0 y el usuario escribe desde 1.
     # Aquí falta restar 1 (o comprobar el rango).
     tareas[numero]["hecha"] = True
@@ -90,7 +89,7 @@ def completar_tarea():
 
 def ver_gastos():
     print()
-    print("--- GASTOS ---")
+    print("GASTOS")
     if len(gastos) == 0:
         print("No hay gastos.")
         return
@@ -156,7 +155,7 @@ def menu_notas():
 
         opcion = input("Opción: ")
 
-        if opcion == "1":
+        if opcion == "1"or opcion=="Ver notas":
             ver_notas()
         elif opcion == "2":
             agregar_nota()
