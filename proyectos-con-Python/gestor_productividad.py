@@ -152,6 +152,7 @@ def menu_notas():
         print("2. Añadir nota")
         print("3. Buscar nota")
         print("4. Contar palabras")
+        print("5.Contar cuantas notas tienes")
         print("5. Volver")
 
         opcion = input("Opción: ")
@@ -165,6 +166,8 @@ def menu_notas():
         elif opcion == "4":
             total = contar_palabras()
             print("Palabras en total:", total)
+        elif opecion==6:
+            contar_cuantas_notas()
         elif opcion == "5":
             break
         else:
@@ -246,10 +249,13 @@ def menu_agua():
 def menu_principal():
     while True:
         print()    
-        print(""                                                       
-                                              ▄    
-   
-                                                       )
+        print("                                                       
+                                              ▄▄       
+ ██   ▀▀                     ██               ██       
+▀██▀▀ ██  ████▄ ▄█▀▀▀ ▄███▄ ▀██▀▀ ▄███▄ ▄███▄ ██ ▄█▀▀▀ 
+ ██   ██  ██ ▀▀ ▀███▄ ██ ██  ██   ██ ██ ██ ██ ██ ▀███▄ 
+ ██   ██▄ ██    ▄▄▄█▀ ▀███▀  ██   ▀███▀ ▀███▀ ██ ▄▄▄█▀ 
+                                        " )
         print("")
         print("Gestor de productivada en la cli ")
         print("1. Notas")
