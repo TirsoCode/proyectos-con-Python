@@ -1,8 +1,8 @@
 
-notas = []      # lista de textos
-tareas = []     # lista de diccionarios: {"texto": ..., "hecha": False}
-gastos = []     # lista de diccionarios: {"concepto": ..., "cantidad": ...}
-agua = 0        # vasos de agua de hoy
+notas = []   
+tareas = []    
+gastos = []   
+agua = 0        
 
 
 # ============================================================
@@ -14,7 +14,7 @@ def ver_notas():
     print("TUS NOTAS")
     if len(notas) == 0:
         print("No hay notas todavía.")
-        return
+        
 
 
     for i in range(0, len(notas)):
@@ -128,6 +128,7 @@ def media_gastos():
 def beber_agua():
     si_no=input("Has bebido agua")
 if si_no=="no":
+    print("Bebe agua!")
     else:
     agua+=1
     print("Felicidades!")
@@ -136,6 +137,7 @@ def ver_agua():
     print("Vasos de agua hoy:", agua, "de 8")
     if agua >= 8:
         print("¡Meta cumplida!")
+        print("Sigue asi!")
 
 
 # ============================================================
@@ -145,12 +147,12 @@ def ver_agua():
 def menu_notas():
     while True:
         print()
-        print("--- NOTAS ---")
+        print(" NOTAS ")
         print("1. Ver notas")
         print("2. Añadir nota")
         print("3. Buscar nota")
         print("4. Contar palabras")
-        print("0. Volver")
+        print("5. Volver")
 
         opcion = input("Opción: ")
 
@@ -163,7 +165,7 @@ def menu_notas():
         elif opcion == "4":
             total = contar_palabras()
             print("Palabras en total:", total)
-        elif opcion == "0":
+        elif opcion == "5":
             break
         else:
             print("Opción no válida.")
@@ -172,11 +174,11 @@ def menu_notas():
 def menu_tareas():
     while True:
         print()
-        print("--- TAREAS ---")
+        print("TAREAS ")
         print("1. Ver tareas")
         print("2. Añadir tarea")
         print("3. Completar tarea")
-        print("0. Volver")
+        print("5. Volver")
 
         opcion = input("Opción: ")
 
@@ -186,7 +188,7 @@ def menu_tareas():
             agregar_tarea()
         elif opcion == "3":
             completar_tarea()
-        elif opcion == "0":
+        elif opcion == "5":
             break
         else:
             print("Opción no válida.")
@@ -200,7 +202,7 @@ def menu_gastos():
         print("2. Añadir gasto")
         print("3. Total")
         print("4. Media")
-        print("0. Volver")
+        print("5. Volver")
 
         opcion = input("Opción: ")
 
@@ -215,7 +217,7 @@ def menu_gastos():
                 print("No hay gastos.")
             else:
                 print("Media:", media_gastos(), "€")
-        elif opcion == "0":
+        elif opcion == "5":
             break
         else:
             print("Opción no válida.")
@@ -224,10 +226,10 @@ def menu_gastos():
 def menu_agua():
     while True:
         print()
-        print("--- AGUA ---")
+        print("AGUA")
         print("1. Ver vasos")
         print("2. Beber un vaso")
-        print("0. Volver")
+        print("3. Volver")
 
         opcion = input("Opción: ")
 
@@ -235,7 +237,7 @@ def menu_agua():
             ver_agua()
         elif opcion == "2":
             beber_agua()
-        elif opcion == "0":
+        elif opcion == "3":
             break
         else:
             print("Opción no válida.")
@@ -252,18 +254,15 @@ def menu_principal():
  ██   ██▄ ██    ▄▄▄█▀ ▀███▀  ██   ▀███▀ ▀███▀ ██ ▄▄▄█▀ 
                                                        
                                                        )
+        print("")
         print("Gestor de productivada en la cli ")
         print("1. Notas")
-        
         print("2. Tareas")
         print("3. Gastos")
         print("4. Agua")
-        print("0. Salir")
+        print("5. Salir")
 
-        opcion = input("Opción: ")
-
-        # BUG 6: input() devuelve texto, así que comparar con
-        # números (1, 2, 3...) nunca es True.
+        opcion int(= input("Opción: "))
         if opcion == 1:
             menu_notas()
         elif opcion == 2:
@@ -272,7 +271,7 @@ def menu_principal():
             menu_gastos()
         elif opcion == 4:
             menu_agua()
-        elif opcion == "0":
+        elif opcion == "5":
             print("Hasta luego.")
             break
         else:
