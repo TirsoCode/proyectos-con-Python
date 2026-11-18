@@ -126,12 +126,11 @@ def media_gastos():
 # ============================================================
 
 def beber_agua():
-    global agua
-
-    # BUG 5: esto pone el contador a 1 cada vez, en vez de sumar.
-    agua = 1
-    print("Vasos de agua hoy:", agua)
-
+    si_no=input("Has bebido agua")
+if si_no=="no":
+    else:
+    agua+=1
+    print("Felicidades!")
 
 def ver_agua():
     print("Vasos de agua hoy:", agua, "de 8")
