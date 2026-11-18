@@ -34,7 +34,7 @@ def agregar_nota():
 
 def buscar_nota():
     palabra = input("Buscar: ")
-    if palabra === notas.lower() or palabra==notas.upper():
+    if palabra == notas.lower() or palabra==notas.upper():
         print("Encontrada la nota es ", nota)
 def contar_cuantas_notas():
     for a in notas:
@@ -74,7 +74,7 @@ def completar_tarea():
         return
 
     numero = int(input("Número de tarea: "))
-def cuantas_tareas:
+def cuantas_tareas():
     print("Tienes",len(tareas))
     
     # BUG 3: la lista empieza en 0 y el usuario escribe desde 1.
@@ -247,12 +247,8 @@ def menu_principal():
     while True:
         print()    
         print(""                                                       
-                                              ▄▄       
- ██   ▀▀                     ██               ██       
-▀██▀▀ ██  ████▄ ▄█▀▀▀ ▄███▄ ▀██▀▀ ▄███▄ ▄███▄ ██ ▄█▀▀▀ 
- ██   ██  ██ ▀▀ ▀███▄ ██ ██  ██   ██ ██ ██ ██ ██ ▀███▄ 
- ██   ██▄ ██    ▄▄▄█▀ ▀███▀  ██   ▀███▀ ▀███▀ ██ ▄▄▄█▀ 
-                                                       
+                                              ▄    
+   
                                                        )
         print("")
         print("Gestor de productivada en la cli ")
