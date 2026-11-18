@@ -1,26 +1,3 @@
-"""
-GESTOR SIMPLE DE PRODUCTIVIDAD
-==============================
-
-Solo usa lo que hemos dado hasta Basic/10_functions:
-
-    variables, print, input
-    if / elif / else
-    while y for (con range y enumerate)
-    listas y diccionarios
-    strings y f-strings
-    funciones con parámetros y return
-
-NO usa clases, ni archivos, ni JSON, ni datetime, ni os.
-Todo se guarda en la memoria del programa: si sales, se borra.
-(El guardado en archivo llega en Intermediate/06_file_handling.py)
-
-Ejecutar:
-    python gestor_productividad.py
-
-Tiene 5 errores marcados con "BUG" para que los arregles,
-y 1 función sin terminar marcada con "TODO".
-"""
 
 notas = []      # lista de textos
 tareas = []     # lista de diccionarios: {"texto": ..., "hecha": False}
@@ -34,7 +11,7 @@ agua = 0        # vasos de agua de hoy
 
 def ver_notas():
     print()
-    print("--- TUS NOTAS ---")
+    print("TUS NOTAS")
     if len(notas) == 0:
         print("No hay notas todavía.")
         return
@@ -48,29 +25,23 @@ def ver_notas():
 def agregar_nota():
     texto = input("Escribe la nota: ")
     if texto == "":
-        print("La nota está vacía.")
+        print("Introduce un nota.")
     else:
         notas.append(texto)
+        if notas>1:
         print("Nota guardada. Tienes", len(notas), "notas.")
-
+    else:
+    print("Nota guardada. Tienes", len(notas), "nota.")
 
 def buscar_nota():
     palabra = input("Buscar: ")
-    encontradas = 0
-    for nota in notas:
-        # BUG 2: comparamos con la nota en minúsculas pero no con
-        # la palabra, así que "PYTHON" no encuentra "python".
-        if palabra in nota.lower():
-            print("-", nota)
-            encontradas = encontradas + 1
-    if encontradas == 0:
-        print("No he encontrado nada.")
-
-
+    if palabra === notas.lower() or palabra==notas.upper():
+        print("Encontrada la nota es ", nota)
 def contar_palabras():
     # TODO: devuelve cuántas palabras hay entre todas las notas.
     # Pista: recorre 'notas' con un for y suma len(nota.split()).
-    pass
+    for a in notas:
+        len(notas)
 
 
 # ============================================================
@@ -283,7 +254,9 @@ def menu_principal():
  ██   ██▄ ██    ▄▄▄█▀ ▀███▀  ██   ▀███▀ ▀███▀ ██ ▄▄▄█▀ 
                                                        
                                                        )
+        print("Gestor de productivada en la cli ")
         print("1. Notas")
+        
         print("2. Tareas")
         print("3. Gastos")
         print("4. Agua")
